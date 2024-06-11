@@ -11,7 +11,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-forgot-password',
   standalone: true,
   imports: [
     RouterLink,
@@ -20,16 +20,15 @@ import { MatButtonModule } from '@angular/material/button';
     MatCheckboxModule,
     MatButtonModule,
   ],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.scss',
+  templateUrl: './forgot-password.component.html',
+  styleUrl: './forgot-password.component.scss',
 })
-export class LoginComponent {
-  loginForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required]),
+export class ForgotPasswordComponent {
+  forgotPasswordForm = new FormGroup({
+    email: new FormControl('', [Validators.required]),
   });
 
-  onLogin() {
-    console.log(this.loginForm);
+  onForgotPassword() {
+    console.log(this.forgotPasswordForm);
   }
 }

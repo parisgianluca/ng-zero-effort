@@ -1,1 +1,63 @@
-<p>sign-up works!</p>
+<div class="w-full h-full flex justify-center items-center">
+    <div class="w-8/12 h-4/5 bg-white rounded-2xl shadow overflow-hidden flex flex-row">
+        <div class="w-2/5 h-full p-16 flex flex-col justify-center relative">
+            <div class="text-center absolute top-16 left-16">
+                <img src="logo.svg" />
+            </div>
+
+            <div class="text-3xl font-bold mb-2">Sign Up</div>
+            <div class="mb-12 text-sm">
+                <span>Already registered?</span>&nbsp;<a class="hover:underline text-blue-700"
+                    [routerLink]="['/auth/login']">Log in now!</a>
+            </div>
+
+            <form (ngSubmit)="onSignUp()" [formGroup]="signUpForm">
+                <mat-form-field class="w-full mb-2">
+                    <mat-label>Name</mat-label>
+                    <input formControlName="name" matInput placeholder="Your Name">
+
+                    @if (signUpForm.controls['name'].hasError('required')) {
+                    <mat-error>Name is required</mat-error>
+                    }
+
+                    @if (signUpForm.controls['name'].hasError('minlength')) {
+                    <mat-error>Name should have at least 3 characters</mat-error>
+                    }
+                </mat-form-field>
+
+                <mat-form-field class="w-full mb-2">
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email" matInput placeholder="your@email.com" type="email">
+
+                    @if (signUpForm.controls['email'].hasError('required')) {
+                    <mat-error>Email address is required</mat-error>
+                    }
+
+                    @if (signUpForm.controls['email'].hasError('email')) {
+                    <mat-error>Please enter a valid email address</mat-error>
+                    }
+                </mat-form-field>
+
+                <mat-form-field class="w-full mb-12">
+                    <mat-label>Password</mat-label>
+                    <input formControlName="password" matInput placeholder="Sup3rS3cretP@ssw0rd" type="password">
+
+                    @if (signUpForm.controls['password'].hasError('required')) {
+                    <mat-error>Password is required</mat-error>
+                    }
+                </mat-form-field>
+
+                <div class="flex flex-row justify-center mb-2">
+                    <button type="submit" class="w-full" mat-flat-button>Sign Up</button>
+                </div>
+            </form>
+        </div>
+        <div class="w-3/5 p-16 bg-gray-800 h-full justify-center flex flex-col">
+            <div class="text-4xl font-bold mb-6 text-white">Welcome to NG Zero Effort!</div>
+            <div class="text-gray-400">
+                Joining is as easy as 1-2-3. Create your account in no time and unlock a world of possibilities.
+                Let's get you started on your new journey!
+            </div>
+        </div>
+    </div>
+</div>

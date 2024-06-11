@@ -12,7 +12,7 @@
                     one for free!</a>
             </div>
 
-            <form (ngSubmit)="onLogin" [formGroup]="loginForm">
+            <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
                 <mat-form-field class="w-full mb-2">
                     <mat-label>Email</mat-label>
                     <input formControlName="email" matInput placeholder="your@email.com" type="email">
@@ -40,14 +40,13 @@
                 </div>
 
                 <div class="text-center text-sm">
-                    <a class="hover:underline text-blue-700" [routerLink]="['/auth/reset-password']">Forgot your
+                    <a class="hover:underline text-blue-700" [routerLink]="['/auth/forgot-password']">Forgot your
                         password?</a>
                 </div>
             </form>
         </div>
         <div class="w-3/5 p-16 bg-gray-800 h-full justify-center flex flex-col">
-            <img src="illustrations/login.svg" class="mb-12 w-1/4" />
-            <div class="text-4xl font-bold mb-6 text-white">Welcome to NG Zero Effort</div>
+            <div class="text-4xl font-bold mb-6 text-white">Welcome back to NG Zero Effort!</div>
             <div class="text-gray-400">
                 Logging in feels like coming home. Dive into your
                 account effortlessly and stay connected with
