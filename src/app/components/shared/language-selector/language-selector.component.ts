@@ -5,17 +5,19 @@ import { SettingsRepository } from '../../../state/settings.repository';
 import { SupportedLanguages } from '../../../app.const';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { tap } from 'rxjs';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-language-selector',
   standalone: true,
-  imports: [MatMenuModule, MatIconModule],
+  imports: [MatMenuModule, MatIconModule, TranslateModule],
   templateUrl: './language-selector.component.html',
   styleUrl: './language-selector.component.scss',
 })
 export class LanguageSelectorComponent {
   settingsRepository = inject(SettingsRepository);
   selectedLanguage = this.settingsRepository.getLanguage();
+  languages = Object.values(SupportedLanguages);
 
   constructor() {
     this.settingsRepository.settings$

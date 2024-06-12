@@ -3,16 +3,12 @@
 </button>
 
 <mat-menu #menu="matMenu" xPosition="before">
-    <button mat-menu-item (click)="changeLanguage(SupportedLanguages.ENGLISH)">
+    @for (language of languages; track language) {
+    <button mat-menu-item (click)="changeLanguage(language)">
         <div class="flex flex-row items-center">
-            <img src="flags/en.svg" class="w-6 mr-2" />
-            <span>English</span>
+            <img [src]="'flags/' + language + '.svg'" class="w-6 mr-2" />
+            <span>{{'supportedLanguages.' + language | translate}}</span>
         </div>
     </button>
-    <button mat-menu-item (click)="changeLanguage(SupportedLanguages.ITALIAN)">
-        <div class="flex flex-row items-center">
-            <img src="flags/it.svg" class="w-6 mr-2" />
-            <span>Italian</span>
-        </div>
-    </button>
+    }
 </mat-menu>
