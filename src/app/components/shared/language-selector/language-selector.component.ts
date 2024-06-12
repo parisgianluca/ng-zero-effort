@@ -20,10 +20,12 @@ export class LanguageSelectorComponent {
   languages = Object.values(SupportedLanguages);
 
   constructor() {
-    this.settingsRepository.settings$
+    this.settingsRepository.language$
       .pipe(
         takeUntilDestroyed(),
-        tap((settings) => (this.selectedLanguage = settings.language))
+        tap((language) => {
+          this.selectedLanguage = language;
+        })
       )
       .subscribe();
   }

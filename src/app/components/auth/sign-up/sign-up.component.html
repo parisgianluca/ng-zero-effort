@@ -5,19 +5,22 @@
                 <img src="logo.svg" />
             </div>
 
-            <div class="text-3xl font-bold mb-2">Sign Up</div>
+            <div class="text-3xl font-bold mb-2">{{'signUp.title' | translate}}</div>
             <div class="mb-12 text-sm">
-                <span>Already registered?</span>&nbsp;<a class="hover:underline text-blue-700"
-                    [routerLink]="['/auth/login']">Log in now!</a>
+                <a class="hover:underline text-blue-700" [routerLink]="['/auth/login']">
+                    {{'signUp.backToLoginLink' | translate}}
+                </a>
             </div>
 
             <form (ngSubmit)="onSignUp()" [formGroup]="signUpForm">
                 <mat-form-field class="w-full mb-2">
-                    <mat-label>Name</mat-label>
-                    <input formControlName="name" matInput placeholder="Your Name">
+                    <mat-label>{{'signUp.form.name.label' | translate}}</mat-label>
+                    <input formControlName="name" matInput placeholder="{{'signUp.form.name.placeholder' | translate}}">
 
                     @if (signUpForm.controls['name'].hasError('required')) {
-                    <mat-error>Name is required</mat-error>
+                    <mat-error>
+                        {{'formErrors.required' | translate }}
+                    </mat-error>
                     }
 
                     @if (signUpForm.controls['name'].hasError('minlength')) {
@@ -26,37 +29,42 @@
                 </mat-form-field>
 
                 <mat-form-field class="w-full mb-2">
-                    <mat-label>Email</mat-label>
-                    <input formControlName="email" matInput placeholder="your@email.com" type="email">
+                    <mat-label>{{'signUp.form.email.label' | translate}}</mat-label>
+                    <input formControlName="email" matInput
+                        placeholder="{{'signUp.form.email.placeholder' | translate}}" type="email">
 
                     @if (signUpForm.controls['email'].hasError('required')) {
-                    <mat-error>Email address is required</mat-error>
+                    <mat-error>{{'formErrors.required' | translate }}</mat-error>
                     }
 
                     @if (signUpForm.controls['email'].hasError('email')) {
-                    <mat-error>Please enter a valid email address</mat-error>
+                    <mat-error>{{'formErrors.invalidEmail' | translate}}</mat-error>
                     }
                 </mat-form-field>
 
                 <mat-form-field class="w-full mb-12">
-                    <mat-label>Password</mat-label>
-                    <input formControlName="password" matInput placeholder="Sup3rS3cretP@ssw0rd" type="password">
+                    <mat-label>{{'signUp.form.password.label' | translate}}</mat-label>
+                    <input formControlName="password" matInput
+                        placeholder="{{'signUp.form.password.placeholder' | translate}}" type="password">
 
                     @if (signUpForm.controls['password'].hasError('required')) {
-                    <mat-error>Password is required</mat-error>
+                    <mat-error>
+                        {{'formErrors.required' | translate }}
+                    </mat-error>
                     }
                 </mat-form-field>
 
                 <div class="flex flex-row justify-center mb-2">
-                    <button type="submit" class="w-full" mat-flat-button>Sign Up</button>
+                    <button type="submit" class="w-full" mat-flat-button>{{'signUp.signUpButton' | translate}}</button>
                 </div>
             </form>
         </div>
-        <div class="w-3/5 p-16 bg-gray-800 h-full justify-center flex flex-col">
-            <div class="text-4xl font-bold mb-6 text-white">Welcome to NG Zero Effort!</div>
+        <div class="w-3/5 p-16 bg-gray-800 h-full justify-center flex flex-col relative">
+            <app-language-selector class="absolute top-16 right-16"></app-language-selector>
+
+            <div class="text-4xl font-bold mb-6 text-white">{{'signUp.rightPanel.title' | translate}}</div>
             <div class="text-gray-400">
-                Joining is as easy as 1-2-3. Create your account in no time and unlock a world of possibilities.
-                Let's get you started on your new journey!
+                {{'signUp.rightPanel.description' | translate}}
             </div>
         </div>
     </div>

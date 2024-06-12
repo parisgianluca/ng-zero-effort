@@ -2,5 +2,86 @@
     "supportedLanguages": {
         "en": "Inglese",
         "it": "Italiano"
+    },
+    "login": {
+        "title": "Accedi",
+        "signUpLink": "Non hai un account? Creane uno gratis!",
+        "forgotPasswordLink": "Hai dimenticato la password?",
+        "form": {
+            "email": {
+                "label": "Email",
+                "placeholder": "tuo@email.com"
+            },
+            "password": {
+                "label": "Password",
+                "placeholder": "Sup3rS3cretP@ssw0rd"
+            }
+        },
+        "rightPanel": {
+            "title": "Bentornato a NG Zero Effort!",
+            "description": "Accedere è come tornare a casa. Entra nel tuo account senza sforzo e rimani connesso con facilità. Il tuo hub digitale ti aspetta – iniziamo!"
+        },
+        "loginButton": "Accedi"
+    },
+    "signUp": {
+        "title": "Registrati",
+        "backToLoginLink": "Torna alla pagina di accesso",
+        "forgotPasswordLink": "Hai dimenticato la password?",
+        "form": {
+            "email": {
+                "label": "Email",
+                "placeholder": "tuo@email.com"
+            },
+            "password": {
+                "label": "Password",
+                "placeholder": "Sup3rS3cretP@ssw0rd"
+            },
+            "name": {
+                "label": "Nome",
+                "placeholder": "Il tuo nome"
+            }
+        },
+        "rightPanel": {
+            "title": "Benvenuto a NG Zero Effort!",
+            "description": "Iscriversi è facile come 1-2-3. Crea il tuo account in un attimo e sblocca un mondo di possibilità. Iniziamo il tuo nuovo viaggio!"
+        },
+        "signUpButton": "Registrati"
+    },
+    "forgotPassword": {
+        "title": "Password dimenticata",
+        "backToLoginLink": "Torna alla pagina di accesso",
+        "form": {
+            "email": {
+                "label": "Email",
+                "placeholder": "tuo@email.com"
+            }
+        },
+        "rightPanel": {
+            "title": "Ottieni una nuova password NG Zero Effort",
+            "description": "Non ricordi la tua password? Nessun problema, capita! Inserisci la tua email, e ti aiuteremo a rientrare nel tuo account. Riconnettiamoci!"
+        },
+        "getResetLinkButton": "Ottieni il link di reset"
+    },
+    "confirmationRequired": {
+        "title": "Conferma richiesta",
+        "backToLoginLink": "Torna alla pagina di accesso",
+        "description": "Per completare la tua registrazione, controlla la tua email per un link di conferma. Clicca sul link per verificare il tuo indirizzo email e attivare il tuo account. Se non hai ricevuto l'email, controlla la cartella spam o richiedi un nuovo link. Siamo entusiasti di averti con noi!",
+        "rightPanel": {
+            "title": "Conferma la tua email NG Zero Effort",
+            "description": "Quasi fatto! Controlla la tua email per un link magico per completare il processo. Cliccalo e sarai pronto – è come sbloccare una porta segreta!"
+        }
+    },
+    "emailConfirmed": {
+        "title": "Benvenuto a bordo!",
+        "backToLoginLink": "Torna alla pagina di accesso",
+        "description": "La tua email è stata confermata con successo! Il tuo account è ora completamente attivato e puoi iniziare a godere di tutte le funzionalità che offriamo. Se hai domande o hai bisogno di ulteriore assistenza, non esitare a contattarci. Benvenuto nella comunità!",
+        "rightPanel": {
+            "title": "Email NG Zero Effort confermata!",
+            "description": "Email confermata! Sei ufficialmente dentro – che il divertimento abbia inizio! È ora di esplorare il tuo nuovo parco giochi digitale!"
+        }
+    },
+    "formErrors": {
+        "required": "Questo campo è obbligatorio",
+        "invalidEmail": "Per favore, inserisci un indirizzo email valido"
     }
 }

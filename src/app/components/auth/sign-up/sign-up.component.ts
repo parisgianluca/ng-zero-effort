@@ -9,6 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
 import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageSelectorComponent } from '../../shared/language-selector/language-selector.component';
 
 @Component({
   selector: 'app-sign-up',
@@ -19,6 +21,8 @@ import { RouterLink } from '@angular/router';
     ReactiveFormsModule,
     MatCheckboxModule,
     MatButtonModule,
+    TranslateModule,
+    LanguageSelectorComponent,
   ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss',

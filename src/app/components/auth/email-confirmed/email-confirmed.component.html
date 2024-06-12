@@ -5,24 +5,23 @@
                 <img src="logo.svg" />
             </div>
 
-            <div class="text-3xl font-bold mb-2">Welcome on board!</div>
+            <div class="text-3xl font-bold mb-2">{{'emailConfirmed.title' | translate}}</div>
             <div class="mb-12 text-sm">
-                <span>You can</span>&nbsp;<a class="hover:underline text-blue-700" [routerLink]="['/auth/login']">login
-                    now</a>
+                <a class="hover:underline text-blue-700" [routerLink]="['/auth/login']">
+                    {{'emailConfirmed.backToLoginLink' | translate}}
+                </a>
             </div>
 
             <div class="text-sm">
-                Your email has been successfully confirmed! Your account is now fully activated, and you can start
-                enjoying all the
-                features we offer. If you have any questions or need further assistance, feel free to reach out. Welcome
-                to the
-                community!
+                {{'emailConfirmed.description' | translate}}
             </div>
         </div>
-        <div class="w-3/5 p-16 bg-gray-800 h-full justify-center flex flex-col">
-            <div class="text-4xl font-bold mb-6 text-white">NG Zero Effort email confirmed!</div>
+        <div class="w-3/5 p-16 bg-gray-800 h-full justify-center flex flex-col relative">
+            <app-language-selector class="absolute top-16 right-16"></app-language-selector>
+
+            <div class="text-4xl font-bold mb-6 text-white">{{'emailConfirmed.rightPanel.title' | translate}}</div>
             <div class="text-gray-400">
-                Email confirmed! You're officially in – let the fun begin! Time to explore your new digital playground!
+                {{'emailConfirmed.rightPanel.description' | translate}}
             </div>
         </div>
     </div>

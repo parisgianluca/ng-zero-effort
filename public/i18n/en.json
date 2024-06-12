@@ -2,5 +2,86 @@
     "supportedLanguages": {
         "en": "English",
         "it": "Italian"
+    },
+    "login": {
+        "title": "Login",
+        "signUpLink": "No account yet? Get one for free!",
+        "forgotPasswordLink": "Forgot your password?",
+        "form": {
+            "email": {
+                "label": "Email",
+                "placeholder": "your@email.com"
+            },
+            "password": {
+                "label": "Password",
+                "placeholder": "Sup3rS3cretP@ssw0rd"
+            }
+        },
+        "rightPanel": {
+            "title": "Welcome back to NG Zero Effort!",
+            "description": "Logging in feels like coming home. Dive into your account effortlessly and stay connected with ease. Your digital hub awaits – let's get started!"
+        },
+        "loginButton": "Login"
+    },
+    "signUp": {
+        "title": "Sign up",
+        "backToLoginLink": "Back to login page",
+        "forgotPasswordLink": "Forgot your password?",
+        "form": {
+            "email": {
+                "label": "Email",
+                "placeholder": "your@email.com"
+            },
+            "password": {
+                "label": "Password",
+                "placeholder": "Sup3rS3cretP@ssw0rd"
+            },
+            "name": {
+                "label": "Name",
+                "placeholder": "Your name"
+            }
+        },
+        "rightPanel": {
+            "title": "Welcome to NG Zero Effort!",
+            "description": "Joining is as easy as 1-2-3. Create your account in no time and unlock a world of possibilities. Let's get you started on your new journey!"
+        },
+        "signUpButton": "Sign Up"
+    },
+    "forgotPassword": {
+        "title": "Forgot password",
+        "backToLoginLink": "Back to login page",
+        "form": {
+            "email": {
+                "label": "Email",
+                "placeholder": "your@email.com"
+            }
+        },
+        "rightPanel": {
+            "title": "Get a new NG Zero Effort password",
+            "description": "Can't remember your password? No worries, it happens! Enter your email, and we'll help you get back into your account. Let's get you reconnected!"
+        },
+        "getResetLinkButton": "Get Reset Link"
+    },
+    "confirmationRequired": {
+        "title": "Confirmation required",
+        "backToLoginLink": "Back to login page",
+        "description": "To complete your registration, please check your email for a confirmation link. Click the link to verify your email address and activate your account. If you didn't receive the email, be sure to check your spam folder or request a new link. We're excited to have you with us!",
+        "rightPanel": {
+            "title": "Confirm your NG Zero Effort email",
+            "description": "Almost there! Check your email for a magical link to complete the process. Click it, and you'll be all set – it's like unlocking a secret door!"
+        }
+    },
+    "emailConfirmed": {
+        "title": "Welcome on board!",
+        "backToLoginLink": "Back to login page",
+        "description": "Your email has been successfully confirmed! Your account is now fully activated, and you can start enjoying all the features we offer. If you have any questions or need further assistance, feel free to reach out. Welcome to the community!",
+        "rightPanel": {
+            "title": "NG Zero Effort email confirmed!",
+            "description": "Email confirmed! You're officially in – let the fun begin! Time to explore your new digital playground!"
+        }
+    },
+    "formErrors": {
+        "required": "This field is required",
+        "invalidEmail": "Please enter a valid email address"
     }
 }

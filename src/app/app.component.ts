@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SettingsRepository } from './state/settings.repository';
 import { TranslateService } from '@ngx-translate/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-root',
@@ -20,10 +19,8 @@ export class AppComponent {
     this.translateService.setDefaultLang(savedLanguage);
     this.translateService.use(savedLanguage);
 
-    this.settingsRepository.settings$
-      .pipe(takeUntilDestroyed())
-      .subscribe((settings) => {
-        this.translateService.use(settings.language);
-      });
+    this.settingsRepository.language$.subscribe((language) => {
+      this.translateService.use(language);
+    });
   }
 }

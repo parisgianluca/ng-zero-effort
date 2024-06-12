@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { createStore, withProps } from '@ngneat/elf';
+import { createStore, select, setProp, withProps } from '@ngneat/elf';
 import { persistState, localStorageStrategy } from '@ngneat/elf-persist-state';
 import { SupportedLanguages } from '../app.const';
 
@@ -11,22 +11,22 @@ const initialState: SettingsState = {
   language: SupportedLanguages.ENGLISH,
 };
 
-const settingsStore = createStore(
+const store = createStore(
   { name: 'settings' },
   withProps<SettingsState>(initialState)
 );
 
-persistState(settingsStore, { key: 'settings', storage: localStorageStrategy });
+persistState(store, { key: 'settings', storage: localStorageStrategy });
 
 @Injectable({ providedIn: 'root' })
 export class SettingsRepository {
-  settings$ = settingsStore.asObservable();
+  language$ = store.pipe(select(({ language }) => language));
 
   setLanguage(language: SupportedLanguages) {
-    settingsStore.update((state) => ({ ...state, language }));
+    store.update(setProp('language', language));
   }
 
   getLanguage() {
-    return settingsStore.getValue().language;
+    return store.getValue().language;
   }
 }

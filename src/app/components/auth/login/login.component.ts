@@ -9,6 +9,8 @@ import {
 } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageSelectorComponent } from '../../shared/language-selector/language-selector.component';
 
 @Component({
   selector: 'app-login',
@@ -19,6 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
     ReactiveFormsModule,
     MatCheckboxModule,
     MatButtonModule,
+    TranslateModule,
+    LanguageSelectorComponent,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
