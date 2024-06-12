@@ -1,5 +1,6 @@
 <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-    <img [src]="'flags/' + selectedLanguage + '.svg'" class="w-12" />
+    <img [src]="'flags/' + selectedLanguage + '.svg'" class="w-12"
+        [ngClass]="{'w-12': size === 'large', 'w-10': size === 'regular', 'w-8': size==='small'}" />
 </button>
 
 <mat-menu #menu="matMenu" xPosition="before">

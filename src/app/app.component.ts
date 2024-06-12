@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SettingsRepository } from './state/settings.repository';
 import { TranslateService } from '@ngx-translate/core';
+import { SupportedLanguages } from './app.const';
 
 @Component({
   selector: 'app-root',
@@ -15,9 +16,7 @@ export class AppComponent {
   translateService = inject(TranslateService);
 
   constructor() {
-    const savedLanguage = this.settingsRepository.getLanguage();
-    this.translateService.setDefaultLang(savedLanguage);
-    this.translateService.use(savedLanguage);
+    this.translateService.setDefaultLang(SupportedLanguages.ENGLISH);
 
     this.settingsRepository.language$.subscribe((language) => {
       this.translateService.use(language);
