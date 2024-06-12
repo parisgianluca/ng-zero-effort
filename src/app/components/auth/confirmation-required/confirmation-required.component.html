@@ -1,0 +1,33 @@
+<div class="w-full h-full flex justify-center items-center">
+    <div class="w-8/12 h-4/5 bg-white rounded-2xl shadow overflow-hidden flex flex-row relative">
+        <div class="w-2/5 h-full p-16 flex flex-col justify-center relative">
+            <div class="text-center absolute top-16 left-16">
+                <img src="logo.svg" />
+            </div>
+
+            <div class="text-3xl font-bold mb-2">Confirmation Required</div>
+            <div class="mb-12 text-sm">
+                <span>Back to</span>&nbsp;<a class="hover:underline text-blue-700"
+                    [routerLink]="['/auth/login']">login</a>
+            </div>
+
+            <div class="text-sm">
+                To complete your registration, please check your email for a confirmation link. Click the link to verify
+                your email
+                address and activate your account. If you didn't receive the email, be sure to check your spam folder or
+                request a new
+                link. We're excited to have you with us!
+            </div>
+        </div>
+        <div class="w-3/5 p-16 bg-gray-800 h-full justify-center flex flex-col relative">
+            <app-language-selector class="absolute top-16 right-16"></app-language-selector>
+
+            <div class="text-4xl font-bold mb-6 text-white">Confirm your NG Zero Effort email</div>
+            <div class="text-gray-400">
+                Almost there! Check your email for a magical link to complete the process. Click it, and you'll be all
+                set – it's like
+                unlocking a secret door!
+            </div>
+        </div>
+    </div>
+</div>

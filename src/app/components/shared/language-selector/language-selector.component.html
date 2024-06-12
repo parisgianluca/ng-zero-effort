@@ -1,0 +1,18 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <img [src]="'flags/' + selectedLanguage + '.svg'" class="w-12" />
+</button>
+
+<mat-menu #menu="matMenu" xPosition="before">
+    <button mat-menu-item (click)="changeLanguage(SupportedLanguages.ENGLISH)">
+        <div class="flex flex-row items-center">
+            <img src="flags/en.svg" class="w-6 mr-2" />
+            <span>English</span>
+        </div>
+    </button>
+    <button mat-menu-item (click)="changeLanguage(SupportedLanguages.ITALIAN)">
+        <div class="flex flex-row items-center">
+            <img src="flags/it.svg" class="w-6 mr-2" />
+            <span>Italian</span>
+        </div>
+    </button>
+</mat-menu>
