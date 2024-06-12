@@ -83,5 +83,9 @@
     "formErrors": {
         "required": "This field is required",
         "invalidEmail": "Please enter a valid email address"
+    },
+    "dashboard": {
+        "title": "Dashboard",
+        "subtitle": "Your Central Hub for Insights and Analytics"
     }
 }

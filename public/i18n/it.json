@@ -83,5 +83,9 @@
     "formErrors": {
         "required": "Questo campo è obbligatorio",
         "invalidEmail": "Per favore, inserisci un indirizzo email valido"
+    },
+    "dashboard": {
+        "title": "Dashboard",
+        "subtitle": "Il tuo hub per analisi e statistiche"
     }
 }
