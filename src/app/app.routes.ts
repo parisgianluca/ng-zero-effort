@@ -65,4 +65,25 @@ export const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'private',
+    loadComponent: () =>
+      import('./components/private/layout/layout.component').then(
+        (c) => c.LayoutComponent
+      ),
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'dashboard',
+      },
+      {
+        path: 'dashboard',
+        loadComponent: () =>
+          import('./components/private/dashboard/dashboard.component').then(
+            (c) => c.DashboardComponent
+          ),
+      },
+    ],
+  },
 ];
