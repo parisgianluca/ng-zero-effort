@@ -1,0 +1,30 @@
+<div class="h-full w-full flex flex-col bg-blue-700">
+    <div class="h-12 w-full flex flex-row items-center m-6">
+        <img src="logo.svg" class="h-3/4 mr-4" />
+        <h1 class="text-white text-2xl">NG<span class="font-bold">0E</span></h1>
+    </div>
+
+    <div class="flex-1 overflow-scroll pl-6 pr-6 text-white">
+        @for (group of sidebar.groups; track group) {
+        <div class="text-white opacity-80 text-xs tracking-widest font-semibold mb-4">
+            {{group.label | uppercase}}
+        </div>
+
+        @for(item of group.items; track item; let last = $last) {
+        <div routerLinkActive="bg-opacity-20 bg-white" [routerLink]="item.routerLink" [ngClass]="last ? 'mb-8' : ''"
+            class="flex flex-row items-center rounded p-3 mb-2 cursor-pointer transition-all hover:bg-opacity-20 hover:bg-white">
+            <mat-icon class="mr-4" fontIcon="{{item.icon}}"></mat-icon>
+            <div class="text-sm">{{item.label}}</div>
+        </div>
+        }
+        }
+    </div>
+
+    <div class="w-full text-white flex flex-row items-center border-t border-t-blue-400 p-6">
+        <mat-icon fontIcon="account_circle" class="mr-4"></mat-icon>
+        <div class="flex flex-col">
+            <div class="text-sm">Gianluca Paris</div>
+            <div class="text-xs opacity-50">gianluca.paris&#64;outlook.com</div>
+        </div>
+    </div>
+</div>
