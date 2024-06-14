@@ -51,6 +51,8 @@ export class AuthService {
 
     return from(signInWithEmailAndPassword(this.auth, email, password)).pipe(
       tap(() => {
+        this.authRepository.setLoading(false);
+
         this.router.navigateByUrl('/private');
       }),
       catchError((err) => this.handleFirebaseAuthError(err))
