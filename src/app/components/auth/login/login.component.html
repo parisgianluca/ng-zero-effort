@@ -1,6 +1,10 @@
 <div class="w-full h-full flex justify-center items-center">
     <div class="w-8/12 h-4/5 bg-white rounded-2xl shadow overflow-hidden flex flex-row">
         <div class="w-2/5 h-full p-16 flex flex-col justify-center relative">
+            @if ((loading$ | async) === true) {
+            <app-loading></app-loading>
+            }
+
             <div class="text-center absolute top-16 left-16">
                 <img src="logo.svg" />
             </div>
@@ -39,7 +43,8 @@
                 </mat-form-field>
 
                 <div class="flex flex-row justify-center mb-2">
-                    <button type="submit" class="w-full" mat-flat-button>{{'login.loginButton' | translate}}</button>
+                    <button [disabled]="!loginForm.valid || (loading$ | async) === true" type="submit" class="w-full"
+                        mat-flat-button>{{'login.loginButton' | translate}}</button>
                 </div>
 
                 <div class="text-center text-sm">

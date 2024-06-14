@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
 import { User } from '@angular/fire/auth';
 import { createStore, select, setProp, withProps } from '@ngneat/elf';
-import { localStorageStrategy, persistState } from '@ngneat/elf-persist-state';
+import {
+  excludeKeys,
+  localStorageStrategy,
+  persistState,
+} from '@ngneat/elf-persist-state';
 
 interface AuthState {
   user: User | null;
@@ -15,7 +19,11 @@ const initialState: AuthState = {
 
 const store = createStore({ name: 'auth' }, withProps<AuthState>(initialState));
 
-persistState(store, { key: 'auth', storage: localStorageStrategy });
+persistState(store, {
+  key: 'auth',
+  storage: localStorageStrategy,
+  source: () => store.pipe(excludeKeys(['loading'])),
+});
 
 @Injectable({ providedIn: 'root' })
 export class AuthRepository {

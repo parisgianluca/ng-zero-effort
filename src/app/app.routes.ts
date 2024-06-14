@@ -36,13 +36,6 @@ export const routes: Routes = [
           ),
       },
       {
-        path: 'reset-password',
-        loadComponent: () =>
-          import(
-            './components/auth/reset-password/reset-password.component'
-          ).then((c) => c.ResetPasswordComponent),
-      },
-      {
         path: 'forgot-password',
         loadComponent: () =>
           import(
@@ -57,11 +50,11 @@ export const routes: Routes = [
           ).then((c) => c.ConfirmationRequiredComponent),
       },
       {
-        path: 'email-confirmed',
+        path: 'password-link-sent',
         loadComponent: () =>
           import(
-            './components/auth/email-confirmed/email-confirmed.component'
-          ).then((c) => c.EmailConfirmedComponent),
+            './components/auth/password-link-sent/password-link-sent.component'
+          ).then((c) => c.PasswordLinkSentComponent),
       },
     ],
   },

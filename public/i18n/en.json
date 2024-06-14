@@ -67,6 +67,15 @@
             "description": "Almost there! Check your email for a magical link to complete the process. Click it, and you'll be all set – it's like unlocking a secret door!"
         }
     },
+    "passwordLinkSent": {
+        "title": "Password Reset Link Sent",
+        "backToLoginLink": "Back to login page",
+        "description": "Your password reset request has been successfully processed. We have sent an email containing a password reset link to the email address associated with your account. Please check your inbox (and spam/junk folder) for the email and follow the instructions to reset your password. The link will be valid for a limited time for security purposes.",
+        "rightPanel": {
+            "title": "Reset link is on the way",
+            "description": "You’ve summoned the mystical Password Reset Link. It's en route to your inbox. While you wait, grab a coffee or do a happy dance. If the email is hiding, check your spam or junk folder. If it’s vanished into the ether, our support wizards are ready to assist. Happy resetting!"
+        }
+    },
     "emailConfirmed": {
         "title": "Welcome on board!",
         "backToLoginLink": "Back to login page",
@@ -87,6 +96,8 @@
     },
     "errorMessages": {
         "auth/email-already-in-use": "The specified email already exists, please log in",
-        "auth/weak-password": "Password should be at least 6 characters"
+        "auth/weak-password": "Password should be at least 6 characters",
+        "auth/invalid-credential": "The credentials you entered are not valid",
+        "auth/too-many-requests": "Too many attempts, try again later"
     }
 }

@@ -17,6 +17,7 @@ import { tap } from 'rxjs';
 import { AuthRepository } from '../../../state/auth.repository';
 import { AsyncPipe } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { LoadingComponent } from '../../shared/loading/loading.component';
 
 @Component({
   selector: 'app-sign-up',
@@ -31,6 +32,7 @@ import { MatIconModule } from '@angular/material/icon';
     LanguageSelectorComponent,
     AsyncPipe,
     MatIconModule,
+    LoadingComponent,
   ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss',

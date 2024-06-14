@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import {
@@ -11,6 +11,10 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageSelectorComponent } from '../../shared/language-selector/language-selector.component';
+import { AuthService } from '../../../services/auth/auth.service';
+import { AuthRepository } from '../../../state/auth.repository';
+import { AsyncPipe } from '@angular/common';
+import { LoadingComponent } from '../../shared/loading/loading.component';
 
 @Component({
   selector: 'app-forgot-password',
@@ -23,16 +27,25 @@ import { LanguageSelectorComponent } from '../../shared/language-selector/langua
     MatButtonModule,
     TranslateModule,
     LanguageSelectorComponent,
+    AsyncPipe,
+    LoadingComponent,
   ],
   templateUrl: './forgot-password.component.html',
   styleUrl: './forgot-password.component.scss',
 })
 export class ForgotPasswordComponent {
+  authService = inject(AuthService);
+  authRepository = inject(AuthRepository);
+
+  loading$ = this.authRepository.loading$;
+
   forgotPasswordForm = new FormGroup({
     email: new FormControl('', [Validators.required]),
   });
 
   onForgotPassword() {
-    console.log(this.forgotPasswordForm);
+    const { email } = this.forgotPasswordForm.value;
+
+    this.authService.sendPasswordResetEmail(email!).subscribe();
   }
 }

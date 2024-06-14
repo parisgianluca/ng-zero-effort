@@ -4,6 +4,7 @@ import {
   Auth,
   createUserWithEmailAndPassword,
   sendEmailVerification,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signOut,
 } from '@angular/fire/auth';
@@ -46,7 +47,7 @@ export class AuthService {
   }
 
   login(email: string, password: string) {
-    this.authRepository.setLoading(false);
+    this.authRepository.setLoading(true);
 
     return from(signInWithEmailAndPassword(this.auth, email, password)).pipe(
       tap(() => {
@@ -64,6 +65,19 @@ export class AuthService {
         this.authRepository.setLoading(false);
 
         this.router.navigateByUrl('/auth/login');
+      }),
+      catchError((err) => this.handleFirebaseAuthError(err))
+    );
+  }
+
+  sendPasswordResetEmail(email: string) {
+    this.authRepository.setLoading(true);
+
+    return from(sendPasswordResetEmail(this.auth, email)).pipe(
+      tap(() => {
+        this.authRepository.setLoading(false);
+
+        this.router.navigateByUrl('/auth/password-link-sent');
       }),
       catchError((err) => this.handleFirebaseAuthError(err))
     );
