@@ -1,4 +1,8 @@
 <div class="w-full h-full flex flex-row">
+    @if (authLoading$ | async) {
+    <app-loading></app-loading>
+    }
+
     @if (sidebar) {
     <div class="w-80">
         <app-sidebar></app-sidebar>

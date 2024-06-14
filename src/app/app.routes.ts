@@ -1,20 +1,26 @@
 import { Routes } from '@angular/router';
+import {
+  AuthGuard,
+  redirectLoggedInTo,
+  redirectUnauthorizedTo,
+} from '@angular/fire/auth-guard';
+
+const redirectLoggedInToPrivate = () =>
+  redirectLoggedInTo(['private', 'dashboard']);
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['auth']);
 
 export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'landing',
-  },
-  {
-    path: 'landing',
-    loadComponent: () =>
-      import('./components/landing/landing.component').then(
-        (c) => c.LandingComponent
-      ),
+    redirectTo: '/auth',
   },
   {
     path: 'auth',
+    canActivate: [AuthGuard],
+    data: {
+      authGuardPipe: redirectLoggedInToPrivate,
+    },
     children: [
       {
         path: '',
@@ -64,6 +70,10 @@ export const routes: Routes = [
       import('./components/private/layout/layout.component').then(
         (c) => c.LayoutComponent
       ),
+    canActivate: [AuthGuard],
+    data: {
+      authGuardPipe: redirectUnauthorizedToLogin,
+    },
     children: [
       {
         path: '',

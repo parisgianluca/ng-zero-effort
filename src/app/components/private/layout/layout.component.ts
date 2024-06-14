@@ -13,18 +13,29 @@ import {
   trigger,
 } from '@angular/animations';
 import { CommonModule } from '@angular/common';
+import { LoadingComponent } from '../../shared/loading/loading.component';
+import { AuthRepository } from '../../../state/auth.repository';
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [RouterModule, SidebarComponent, TopbarComponent, CommonModule],
+  imports: [
+    RouterModule,
+    SidebarComponent,
+    TopbarComponent,
+    CommonModule,
+    LoadingComponent,
+  ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',
 })
 export class LayoutComponent {
+  authRepository = inject(AuthRepository);
   settingsRepository = inject(SettingsRepository);
 
   sidebar = true;
+
+  authLoading$ = this.authRepository.loading$;
 
   constructor() {
     this.settingsRepository.sidebar$
