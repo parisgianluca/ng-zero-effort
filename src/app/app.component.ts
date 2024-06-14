@@ -9,6 +9,8 @@ import {
   NotificationRepository,
 } from './state/notifications.repository';
 import { SettingsRepository } from './state/settings.repository';
+import { Auth, User, authState } from '@angular/fire/auth';
+import { AuthRepository } from './state/auth.repository';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +24,10 @@ export class AppComponent {
   translateService = inject(TranslateService);
   notificationRepository = inject(NotificationRepository);
 
+  auth = inject(Auth);
+  authState$ = authState(this.auth);
+  authRepository = inject(AuthRepository);
+
   loading = true;
 
   constructor() {
@@ -29,6 +35,10 @@ export class AppComponent {
 
     this.settingsRepository.language$.subscribe((language) => {
       this.translateService.use(language);
+    });
+
+    this.authState$.subscribe((user: User | null) => {
+      this.authRepository.setUser(user);
     });
   }
 

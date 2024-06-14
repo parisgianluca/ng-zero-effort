@@ -33,4 +33,8 @@ export class AuthRepository {
   setLoading(loading: boolean) {
     store.update(setProp('loading', loading));
   }
+
+  setUser(user: User | null) {
+    store.update(setProp('user', user));
+  }
 }

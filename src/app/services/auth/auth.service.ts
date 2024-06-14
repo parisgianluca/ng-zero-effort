@@ -50,7 +50,8 @@ export class AuthService {
     this.authRepository.setLoading(true);
 
     return from(signInWithEmailAndPassword(this.auth, email, password)).pipe(
-      tap(() => {
+      tap((auth) => {
+        this.authRepository.setUser(auth.user);
         this.authRepository.setLoading(false);
 
         this.router.navigateByUrl('/private');

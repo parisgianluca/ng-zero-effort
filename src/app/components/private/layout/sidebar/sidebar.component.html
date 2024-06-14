@@ -21,10 +21,12 @@
     </div>
 
     <div class="w-full text-white flex flex-row items-center border-t border-t-blue-400 p-6">
+        @if (user$ | async; as user) {
         <mat-icon class="text-white mr-4" fontIcon="account_circle"></mat-icon>
         <div class="flex flex-col">
-            <div class="text-sm">Gianluca Paris</div>
-            <div class="text-xs opacity-50">gianluca.paris&#64;outlook.com</div>
+            <div class="text-sm">Welcome</div>
+            <div class="text-xs opacity-50">{{user.email}}</div>
         </div>
+        }
     </div>
 </div>
