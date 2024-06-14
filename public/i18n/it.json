@@ -87,5 +87,9 @@
     "dashboard": {
         "title": "Dashboard",
         "subtitle": "Il tuo hub per analisi e statistiche"
+    },
+    "errorMessages": {
+        "title": "Errore",
+        "signUp": "Errore durante la registrazione, riprovare"
     }
 }

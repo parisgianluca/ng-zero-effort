@@ -1,1 +1,7 @@
 <router-outlet></router-outlet>
+
+<div class="absolute top-0 right-0 h-full flex flex-col justify-end pb-4 pr-4">
+    @for (notification of notificationRepository.notifications$ | async; track notification) {
+    <app-notification (closed)="onNotificationClosed($event)" [notification]="notification"></app-notification>
+    }
+</div>

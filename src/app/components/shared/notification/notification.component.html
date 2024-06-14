@@ -1,0 +1,14 @@
+@if (notification) {
+<div class="rounded-lg pl-5 pr-5 pt-2 pb-2 border mt-4 animate__animated animate__bounceIn"
+    [ngClass]="notification.severity">
+    <div class="flex flex-row">
+        <div class="flex flex-row items-center">
+            <div class="text-sm flex-1 mr-4">{{notification.message}}</div>
+            <div
+                class="rounded-full cursor-pointer w-8 h-8 flex flex-row justify-center items-center hover:bg-opacity-40 hover:bg-white">
+                <mat-icon (click)="closed.emit(notification)" [ngClass]="notification.severity">close</mat-icon>
+            </div>
+        </div>
+    </div>
+</div>
+}

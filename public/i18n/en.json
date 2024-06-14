@@ -35,10 +35,6 @@
             "password": {
                 "label": "Password",
                 "placeholder": "Sup3rS3cretP@ssw0rd"
-            },
-            "name": {
-                "label": "Name",
-                "placeholder": "Your name"
             }
         },
         "rightPanel": {
@@ -82,10 +78,15 @@
     },
     "formErrors": {
         "required": "This field is required",
-        "invalidEmail": "Please enter a valid email address"
+        "invalidEmail": "Please enter a valid email address",
+        "minPasswordLength": "Password should be at least 6 characters"
     },
     "dashboard": {
         "title": "Dashboard",
         "subtitle": "Your Central Hub for Insights and Analytics"
+    },
+    "errorMessages": {
+        "auth/email-already-in-use": "The specified email already exists, please log in",
+        "auth/weak-password": "Password should be at least 6 characters"
     }
 }

@@ -5,7 +5,9 @@
                 <img src="logo.svg" />
             </div>
 
-            <div class="text-3xl font-bold mb-2">{{'signUp.title' | translate}}</div>
+            <div class="text-3xl font-bold mb-2">
+                {{'signUp.title' | translate}}
+            </div>
             <div class="mb-12 text-sm">
                 <a class="hover:underline text-blue-700" [routerLink]="['/auth/login']">
                     {{'signUp.backToLoginLink' | translate}}
@@ -13,21 +15,6 @@
             </div>
 
             <form (ngSubmit)="onSignUp()" [formGroup]="signUpForm">
-                <mat-form-field class="w-full mb-2">
-                    <mat-label>{{'signUp.form.name.label' | translate}}</mat-label>
-                    <input formControlName="name" matInput placeholder="{{'signUp.form.name.placeholder' | translate}}">
-
-                    @if (signUpForm.controls['name'].hasError('required')) {
-                    <mat-error>
-                        {{'formErrors.required' | translate }}
-                    </mat-error>
-                    }
-
-                    @if (signUpForm.controls['name'].hasError('minlength')) {
-                    <mat-error>Name should have at least 3 characters</mat-error>
-                    }
-                </mat-form-field>
-
                 <mat-form-field class="w-full mb-2">
                     <mat-label>{{'signUp.form.email.label' | translate}}</mat-label>
                     <input formControlName="email" matInput
@@ -52,10 +39,17 @@
                         {{'formErrors.required' | translate }}
                     </mat-error>
                     }
+
+                    @if (signUpForm.controls['password'].hasError('minlength')) {
+                    <mat-error>
+                        {{'formErrors.passwordMinLength' | translate }}
+                    </mat-error>
+                    }
                 </mat-form-field>
 
                 <div class="flex flex-row justify-center mb-2">
-                    <button type="submit" class="w-full" mat-flat-button>{{'signUp.signUpButton' | translate}}</button>
+                    <button [disabled]="!signUpForm.valid || (loading$ | async)" type="submit" class="w-full"
+                        mat-flat-button>{{'signUp.signUpButton' | translate}}</button>
                 </div>
             </form>
         </div>
