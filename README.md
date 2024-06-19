@@ -1,27 +1,68 @@
-# NgZeroEffort
+# NG Zero Effort 🚀
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+NG Zero Effort is an Angular starter template that accelerates your web app development process by eliminating the need to write authentication code from scratch. With NG Zero Effort, you get a robust foundation integrated with Firebase for seamless authentication workflows and prebuilt pages for essential user management tasks.
 
-## Development server
+![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/NG-Zero-Effort)
+![GitHub stars](https://img.shields.io/github/stars/yourusername/NG-Zero-Effort?style=social)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features 🛠️
 
-## Code scaffolding
+### Authentication & User Management
+- **Ready-to-use authentication** workflows including login, signup, email confirmation, forgot password, and password reset.
+- Secure user data management powered by Firebase authentication backend.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Pages
+- **Public Pages:**
+  - Login
+  - Signup
+  - Confirmation Required
+  - Forgot Password
+  - Password Reset Link Sent
+- **Authenticated Pages:**
+  - Dashboard
 
-## Build
+### Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **[Angular](https://angular.io/)** version 18 as the framework.
+- **[Firebase](https://firebase.google.com/)** for seamless authentication and backend services.
+- **[Elf](https://github.com/yourusername/elf)** as a state manager.
+- **[Tailwind CSS](https://tailwindcss.com/)** for rapid and utility-first CSS.
+- **[Angular Material](https://material.angular.io/)** for UI components.
+- **[ngx-translate](https://github.com/ngx-translate/core)** for multilingual support (English and Italian included).
 
-## Running unit tests
+## Getting Started 🛫
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. **Clone the repository:**
 
-## Running end-to-end tests
+```bash 
+git clone https://github.com/yourusername/ng-zero-effort.git  
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+cd ng-zero-effort
+```
+2. **Install dependencies:**
+```bash
+npm install
+```
+3. **Configure Firebase:**
+- Replace the Firebase configuration in `app.config.ts` with your own Firebase credentials.
+```typescript
+provideFirebaseApp(() =>
+   initializeApp({
+     projectId: 'your-project-id',
+     appId: 'your-app-id',
+     storageBucket: 'your-storage-bucket',
+     apiKey: 'your-api-key',
+     authDomain: 'your-auth-domain',
+     messagingSenderId: 'your-sender-id',
+   })
+);
+```
+4. **Start the development server:**
+```bash
+npm start
+```
+5. **Enjoy:**
+Your app should now be running locally. Navigate to http://localhost:4200 to see it in action.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Contributing 🤝
+If you have suggestions or improvements, feel free to contact me at gianluca.paris@outlook.com or open a pull request. Contributions are welcomed!
