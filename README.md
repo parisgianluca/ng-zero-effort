@@ -2,9 +2,6 @@
 
 NG Zero Effort is an Angular starter template that accelerates your web app development process by eliminating the need to write authentication code from scratch. With NG Zero Effort, you get a robust foundation integrated with Firebase for seamless authentication workflows and prebuilt pages for essential user management tasks.
 
-![GitHub last commit](https://img.shields.io/github/parisgianluca/ng-zero-effort)
-![GitHub stars](https://img.shields.io/github/stars/parisgianluca/ng-zero-effort?style=social)
-
 ## Features 🛠️
 
 ### Authentication & User Management
