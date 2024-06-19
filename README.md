@@ -29,10 +29,10 @@ NG Zero Effort is an Angular starter template that accelerates your web app deve
 
 ## Getting Started 🛫
 
-1a. **Use this template:**
-- On top right of repository, click the `Use this template` button and generate a new repository.
+1. **Clone the repository:**
+- Use this template On top right of repository, click the `Use this template` button and generate a new repository.
 
-1b. **Clone the repository:**
+- Or clone the repository:
 
 ```bash 
 git clone https://github.com/parisgianluca/ng-zero-effort.git  
