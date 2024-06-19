@@ -92,12 +92,13 @@
     },
     "dashboard": {
         "title": "Dashboard",
-        "subtitle": "Your Central Hub for Insights and Analytics"
+        "subtitle": "Your Central Hub for Insights and Analytics",
+        "message": "You have completed the registration and login process. This is your starting point to begin building your dashboard. If you have any advice or suggestions to improve this repository, please send them via email to gianluca.paris@outlook.com or open a pull request ☺️"
     },
     "errorMessages": {
         "auth/email-already-in-use": "The specified email already exists, please log in",
         "auth/weak-password": "Password should be at least 6 characters",
         "auth/invalid-credential": "The credentials you entered are not valid",
         "auth/too-many-requests": "Too many attempts, try again later"
-    }
+    },
 }

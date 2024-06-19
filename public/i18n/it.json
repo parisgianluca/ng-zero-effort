@@ -4,13 +4,13 @@
         "it": "Italiano"
     },
     "login": {
-        "title": "Accedi",
-        "signUpLink": "Non hai un account? Creane uno gratis!",
-        "forgotPasswordLink": "Hai dimenticato la password?",
+        "title": "Accesso",
+        "signUpLink": "Non hai un account? Ottienilo gratuitamente!",
+        "forgotPasswordLink": "Password dimenticata?",
         "form": {
             "email": {
                 "label": "Email",
-                "placeholder": "tuo@email.com"
+                "placeholder": "tua@email.com"
             },
             "password": {
                 "label": "Password",
@@ -18,32 +18,28 @@
             }
         },
         "rightPanel": {
-            "title": "Bentornato a NG Zero Effort!",
-            "description": "Accedere è come tornare a casa. Entra nel tuo account senza sforzo e rimani connesso con facilità. Il tuo hub digitale ti aspetta – iniziamo!"
+            "title": "Bentornato su NG Zero Effort!",
+            "description": "Accedere è come tornare a casa. Entra nel tuo account senza sforzo e resta connesso con facilità. Il tuo hub digitale ti aspetta - cominciamo!"
         },
         "loginButton": "Accedi"
     },
     "signUp": {
         "title": "Registrati",
         "backToLoginLink": "Torna alla pagina di accesso",
-        "forgotPasswordLink": "Hai dimenticato la password?",
+        "forgotPasswordLink": "Password dimenticata?",
         "form": {
             "email": {
                 "label": "Email",
-                "placeholder": "tuo@email.com"
+                "placeholder": "tua@email.com"
             },
             "password": {
                 "label": "Password",
                 "placeholder": "Sup3rS3cretP@ssw0rd"
-            },
-            "name": {
-                "label": "Nome",
-                "placeholder": "Il tuo nome"
             }
         },
         "rightPanel": {
-            "title": "Benvenuto a NG Zero Effort!",
-            "description": "Iscriversi è facile come 1-2-3. Crea il tuo account in un attimo e sblocca un mondo di possibilità. Iniziamo il tuo nuovo viaggio!"
+            "title": "Benvenuto su NG Zero Effort!",
+            "description": "Registrarsi è facile come 1-2-3. Crea il tuo account in pochi istanti e sblocca un mondo di possibilità. Iniziamo il tuo nuovo viaggio!"
         },
         "signUpButton": "Registrati"
     },
@@ -53,43 +49,56 @@
         "form": {
             "email": {
                 "label": "Email",
-                "placeholder": "tuo@email.com"
+                "placeholder": "tua@email.com"
             }
         },
         "rightPanel": {
             "title": "Ottieni una nuova password NG Zero Effort",
-            "description": "Non ricordi la tua password? Nessun problema, capita! Inserisci la tua email, e ti aiuteremo a rientrare nel tuo account. Riconnettiamoci!"
+            "description": "Non ricordi la tua password? Nessun problema, può succedere! Inserisci la tua email e ti aiuteremo a tornare nel tuo account. Ricollegati con facilità!"
         },
         "getResetLinkButton": "Ottieni il link di reset"
     },
     "confirmationRequired": {
         "title": "Conferma richiesta",
         "backToLoginLink": "Torna alla pagina di accesso",
-        "description": "Per completare la tua registrazione, controlla la tua email per un link di conferma. Clicca sul link per verificare il tuo indirizzo email e attivare il tuo account. Se non hai ricevuto l'email, controlla la cartella spam o richiedi un nuovo link. Siamo entusiasti di averti con noi!",
+        "description": "Per completare la registrazione, controlla la tua email per il link di conferma. Clicca sul link per verificare il tuo indirizzo email e attivare il tuo account. Se non hai ricevuto l'email, controlla anche nella cartella spam o richiedi un nuovo link. Siamo felici di averti con noi!",
         "rightPanel": {
             "title": "Conferma la tua email NG Zero Effort",
-            "description": "Quasi fatto! Controlla la tua email per un link magico per completare il processo. Cliccalo e sarai pronto – è come sbloccare una porta segreta!"
+            "description": "Quasi fatto! Controlla la tua email per un link magico per completare il processo. Cliccaci sopra e sarai a posto - è come sbloccare una porta segreta!"
+        }
+    },
+    "passwordLinkSent": {
+        "title": "Link di reset password inviato",
+        "backToLoginLink": "Torna alla pagina di accesso",
+        "description": "La tua richiesta di reset password è stata elaborata con successo. Abbiamo inviato un'email contenente un link di reset password all'indirizzo associato al tuo account. Controlla la tua inbox (e la cartella spam/junk) e segui le istruzioni per resetare la tua password. Il link sarà valido per un periodo limitato per motivi di sicurezza.",
+        "rightPanel": {
+            "title": "Il link di reset è in arrivo",
+            "description": "Hai invocato il mistico Link di Reset Password. Sta per arrivare nella tua inbox. Nel frattempo, prenditi un caffè o fai una danza della gioia. Se l'email si nasconde, controlla nella cartella spam o junk. Se è sparita nel nulla, i nostri maghi del supporto sono pronti ad aiutarti. Buon reset!"
         }
     },
     "emailConfirmed": {
         "title": "Benvenuto a bordo!",
         "backToLoginLink": "Torna alla pagina di accesso",
-        "description": "La tua email è stata confermata con successo! Il tuo account è ora completamente attivato e puoi iniziare a godere di tutte le funzionalità che offriamo. Se hai domande o hai bisogno di ulteriore assistenza, non esitare a contattarci. Benvenuto nella comunità!",
+        "description": "La tua email è stata confermata con successo! Il tuo account è ora completamente attivato e puoi iniziare a godere di tutte le funzionalità che offriamo. Se hai domande o hai bisogno di assistenza ulteriore, non esitare a contattarci. Benvenuto nella community!",
         "rightPanel": {
             "title": "Email NG Zero Effort confermata!",
-            "description": "Email confermata! Sei ufficialmente dentro – che il divertimento abbia inizio! È ora di esplorare il tuo nuovo parco giochi digitale!"
+            "description": "Email confermata! Sei ufficialmente dentro - che inizi il divertimento! È tempo di esplorare il tuo nuovo playground digitale!"
         }
     },
     "formErrors": {
         "required": "Questo campo è obbligatorio",
-        "invalidEmail": "Per favore, inserisci un indirizzo email valido"
+        "invalidEmail": "Inserisci un indirizzo email valido",
+        "minPasswordLength": "La password deve essere lunga almeno 6 caratteri"
     },
     "dashboard": {
         "title": "Dashboard",
-        "subtitle": "Il tuo hub per analisi e statistiche"
+        "subtitle": "Il tuo hub centrale per Insights e Analisi",
+        "message": "Hai completato il processo di registrazione e accesso. Questo è il tuo punto di partenza per iniziare a costruire la tua dashboard. Se hai consigli o suggerimenti per migliorare questo repository, inviali via email a gianluca.paris@outlook.com o apri una pull request ☺️"
     },
     "errorMessages": {
-        "title": "Errore",
-        "signUp": "Errore durante la registrazione, riprovare"
+        "auth/email-already-in-use": "L'indirizzo email specificato esiste già, per favore accedi",
+        "auth/weak-password": "La password deve essere lunga almeno 6 caratteri",
+        "auth/invalid-credential": "Le credenziali inserite non sono valide",
+        "auth/too-many-requests": "Troppi tentativi, riprova più tardi"
     }
 }

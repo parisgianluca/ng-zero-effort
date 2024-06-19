@@ -11,9 +11,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { LanguageSelectorComponent } from '../../shared/language-selector/language-selector.component';
 import { AuthService } from '../../../services/auth/auth.service';
 import { AuthRepository } from '../../../state/auth.repository';
+import { LanguageSelectorComponent } from '../../shared/language-selector/language-selector.component';
 import { LoadingComponent } from '../../shared/loading/loading.component';
 
 @Component({
