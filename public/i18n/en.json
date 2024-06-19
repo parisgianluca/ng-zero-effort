@@ -100,5 +100,5 @@
         "auth/weak-password": "Password should be at least 6 characters",
         "auth/invalid-credential": "The credentials you entered are not valid",
         "auth/too-many-requests": "Too many attempts, try again later"
-    },
+    }
 }
