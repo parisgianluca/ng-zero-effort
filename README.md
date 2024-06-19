@@ -32,7 +32,7 @@ NG Zero Effort is an Angular starter template that accelerates your web app deve
 1. **Clone the repository:**
 
 ```bash 
-git clone https://github.com/yourusername/ng-zero-effort.git  
+git clone https://github.com/parisgianluca/ng-zero-effort.git  
 
 cd ng-zero-effort
 ```
